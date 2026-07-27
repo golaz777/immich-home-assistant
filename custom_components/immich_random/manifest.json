@@ -1,0 +1,12 @@
+{
+  "domain": "immich_random",
+  "name": "Immich Random Image",
+  "codeowners": ["@golaz777"],
+  "config_flow": true,
+  "documentation": "https://github.com/golaz777/immich-home-assistant",
+  "integration_type": "service",
+  "iot_class": "local_polling",
+  "issue_tracker": "https://github.com/golaz777/immich-home-assistant/issues",
+  "requirements": [],
+  "version": "1.0.0"
+}

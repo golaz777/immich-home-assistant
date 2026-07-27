@@ -12,7 +12,7 @@ jobs:
     name: Validate for HACS
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v5
       - uses: hacs/action@main
         with:
           category: integration
@@ -22,5 +22,22 @@ jobs:
     name: Validate with hassfest
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - uses: home-assistant/actions/hassfest@master
+
+  lint-and-test:
+    name: Lint and test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements_test.txt
+      - name: Ruff
+        run: ruff check custom_components tests
+      - name: Pytest
+        run: pytest tests -v

@@ -1,0 +1,50 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "description": "Enter the URL of your Immich server and an API key generated under Account Settings → API Keys.",
+        "data": {
+          "host": "Host",
+          "api_key": "API key"
+        }
+      },
+      "reauth_confirm": {
+        "description": "The API key for {host} is no longer valid. Enter a new one.",
+        "data": {
+          "api_key": "API key"
+        }
+      },
+      "reconfigure": {
+        "description": "Update the connection details for your Immich server.",
+        "data": {
+          "host": "Host",
+          "api_key": "API key"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Failed to connect",
+      "invalid_auth": "Invalid authentication",
+      "unknown": "Unexpected error"
+    },
+    "abort": {
+      "already_configured": "This Immich server is already configured",
+      "reauth_successful": "Re-authentication was successful",
+      "reconfigure_successful": "Re-configuration was successful"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "description": "Select the albums you want a random-image entity for. An entity for your favorites is always created.",
+        "data": {
+          "watched_albums": "Albums for which entities will be created"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Failed to connect",
+      "invalid_auth": "Invalid authentication"
+    }
+  }
+}
