@@ -110,3 +110,7 @@ pip install -r requirements_test.txt
 ruff check custom_components tests
 pytest tests -v
 ```
+
+## License
+
+[MIT](LICENSE). Originally created by [@outadoc](https://github.com/outadoc); maintained in this fork by [@golaz777](https://github.com/golaz777).
